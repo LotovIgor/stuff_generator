@@ -65,6 +65,8 @@ def generate(sl, st, n):
             if i >= 3 and s[-1] in '.!?':
                 break
             s += ' '
+        if s[-1] not in '.!?':
+            s += '.'
         with open('output.txt', 'a') as f:
             f.write(s + ' ')
 

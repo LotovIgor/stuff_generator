@@ -66,6 +66,7 @@ def generate(sl, st, n):
                 break
             s += ' '
         if s[-1] not in '.!?':
+            s = s[:-1]
             s += '.'
         with open('output.txt', 'a') as f:
             f.write(s + ' ')
@@ -73,9 +74,9 @@ def generate(sl, st, n):
 
 if __name__ == '__main__':
     # generate({'g.': ['g.']}, ['g.'], 3)
-    sp = ['Hello,', 'my', 'name', 'is', 'Igor.', 'I', 'am', 'Igor.', 'Igor', 'is', 'me.']
-    un = ['Hello,', 'my', 'name', 'is', 'Igor.', 'I', 'am', 'Igor', 'is', 'me.']
-    st = ['Hello,', 'Igor.', 'I', 'Igor']
+    sp = ['Hello,', 'my', 'name', 'is', 'Igor', 'I', 'am', 'Igor', 'Igor', 'is', 'me']
+    un = ['Hello,', 'my', 'name', 'is', 'Igor', 'I', 'am', 'Igor', 'is', 'me']
+    st = ['Hello,', 'Igor', 'I', 'Igor']
     n = 5
     # print(link(sp, un))
     generate(link(sp, un), st, n)
